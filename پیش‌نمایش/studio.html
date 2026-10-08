@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="fa-IR" dir="rtl"><head><meta charset="UTF-8"><title>استودیو</title><style>body{background:#f5f7fa;font-family:Tahoma,sans-serif;padding:32px;margin:0}</style></head><body>		<div class="etehadyar-studio" id="etehadyar-studio-in69rh" dir="rtl"
+			data-ajax="https://example.test/wp-admin/admin-ajax.php"
+			data-root="https://example.test/wp-json/etehadyar/v1"
+			data-nonce="nonce-3fc32408d585cee02dae554a21996721"
+			data-rest-nonce="nonce-d73ac0cc88ef4b4be3ea571ffa242588">
+
+			<div class="etehadyar-studio__bar">
+				<span class="etehadyar-studio__balance">
+					موجودی:					<strong data-slot="balance">2,500,000 ریال</strong>
+				</span>
+				<a class="etehadyar-studio__topup"
+					href="https://example.test/">
+					شارژ کیف پول				</a>
+			</div>
+
+			<div class="etehadyar-studio__tabs" role="tablist">
+													<button type="button" role="tab"
+						class="etehadyar-studio__tab is-active"
+						data-tab="content"
+						aria-selected="true"
+						>
+						<span aria-hidden="true">✍️</span>
+						تولید محتوا					</button>
+														<button type="button" role="tab"
+						class="etehadyar-studio__tab"
+						data-tab="image"
+						aria-selected="false"
+						>
+						<span aria-hidden="true">🖼️</span>
+						ساخت تصویر					</button>
+														<button type="button" role="tab"
+						class="etehadyar-studio__tab"
+						data-tab="voice"
+						aria-selected="false"
+						>
+						<span aria-hidden="true">🎙️</span>
+						تبدیل متن به صدا					</button>
+												</div>
+
+										<section class="etehadyar-studio__panel is-active"
+					data-panel="content"
+					data-action="eaiw_factory_generate"
+					data-operation="content_word"
+					data-price="5000"
+					>
+
+					
+						<p class="etehadyar-studio__hint">موضوع مقاله را بنویسید؛ خروجی، متن کامل فارسی است.</p>
+
+						<label class="etehadyar-studio__label" for="etehadyar-studio-in69rh-content">
+							توضیح شما						</label>
+						<textarea class="etehadyar-studio__input"
+							id="etehadyar-studio-in69rh-content"
+							data-field="prompt" rows="4"></textarea>
+
+													<div class="etehadyar-studio__row">
+								<label class="etehadyar-studio__label" for="etehadyar-studio-in69rh-len">
+									طول تقریبی (کلمه)								</label>
+								<input class="etehadyar-studio__number" type="number"
+									id="etehadyar-studio-in69rh-len" data-field="length"
+									value="800" min="100" max="5000" step="100" dir="ltr">
+							</div>
+						
+						<div class="etehadyar-studio__footer">
+							<span class="etehadyar-studio__cost">
+								هزینهٔ تقریبی:								<strong data-slot="estimate">—</strong>
+							</span>
+							<button type="button" class="etehadyar-studio__run" data-action="run">
+								اجرا							</button>
+						</div>
+
+						<p class="etehadyar-studio__status" data-slot="status" role="status" aria-live="polite"></p>
+						<div class="etehadyar-studio__result" data-slot="result" hidden></div>
+
+									</section>
+											<section class="etehadyar-studio__panel"
+					data-panel="image"
+					data-action="eaiw_vision_generate"
+					data-operation="image"
+					data-price="20000"
+					hidden>
+
+					
+						<p class="etehadyar-studio__hint">تصویر را با جزئیات توصیف کنید — هرچه دقیق‌تر، بهتر.</p>
+
+						<label class="etehadyar-studio__label" for="etehadyar-studio-in69rh-image">
+							توضیح شما						</label>
+						<textarea class="etehadyar-studio__input"
+							id="etehadyar-studio-in69rh-image"
+							data-field="prompt" rows="4"></textarea>
+
+						
+						<div class="etehadyar-studio__footer">
+							<span class="etehadyar-studio__cost">
+								هزینهٔ تقریبی:								<strong data-slot="estimate">—</strong>
+							</span>
+							<button type="button" class="etehadyar-studio__run" data-action="run">
+								اجرا							</button>
+						</div>
+
+						<p class="etehadyar-studio__status" data-slot="status" role="status" aria-live="polite"></p>
+						<div class="etehadyar-studio__result" data-slot="result" hidden></div>
+
+									</section>
+											<section class="etehadyar-studio__panel"
+					data-panel="voice"
+					data-action="eaiw_tts_generate"
+					data-operation="voice_minute"
+					data-price="15000"
+					hidden>
+
+					
+						<p class="etehadyar-studio__hint">متن را بچسبانید؛ خروجی یک فایل صوتی MP3 است.</p>
+
+						<label class="etehadyar-studio__label" for="etehadyar-studio-in69rh-voice">
+							متن برای خوانده شدن						</label>
+						<textarea class="etehadyar-studio__input"
+							id="etehadyar-studio-in69rh-voice"
+							data-field="prompt" rows="6"></textarea>
+
+						
+						<div class="etehadyar-studio__footer">
+							<span class="etehadyar-studio__cost">
+								هزینهٔ تقریبی:								<strong data-slot="estimate">—</strong>
+							</span>
+							<button type="button" class="etehadyar-studio__run" data-action="run">
+								اجرا							</button>
+						</div>
+
+						<p class="etehadyar-studio__status" data-slot="status" role="status" aria-live="polite"></p>
+						<div class="etehadyar-studio__result" data-slot="result" hidden></div>
+
+									</section>
+									</div>
+
+		<style>
+		#etehadyar-studio-in69rh.etehadyar-studio{max-width:720px;margin:0 auto;font-family:inherit;box-sizing:border-box}
+		#etehadyar-studio-in69rh *{box-sizing:border-box}
+		#etehadyar-studio-in69rh .etehadyar-studio__bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;margin-bottom:14px;background:#eef6ff;border:1px solid #d7e7fb;border-radius:11px;font-size:.9rem;flex-wrap:wrap}
+		#etehadyar-studio-in69rh .etehadyar-studio__topup{font-weight:600;color:#1a5fcc;text-decoration:none}
+		#etehadyar-studio-in69rh .etehadyar-studio__tabs{display:flex;gap:6px;margin-bottom:0;flex-wrap:wrap}
+		#etehadyar-studio-in69rh .etehadyar-studio__tab{padding:10px 16px;border:1px solid #e3e6ea;border-bottom:none;border-radius:11px 11px 0 0;background:#f7f8fa;font:inherit;font-size:.92rem;cursor:pointer;display:flex;align-items:center;gap:6px}
+		#etehadyar-studio-in69rh .etehadyar-studio__tab.is-active{background:#fff;font-weight:700}
+		#etehadyar-studio-in69rh .etehadyar-studio__tab:disabled{opacity:.45;cursor:not-allowed}
+		#etehadyar-studio-in69rh .etehadyar-studio__panel{background:#fff;border:1px solid #e3e6ea;border-radius:0 11px 11px 11px;padding:22px}
+		#etehadyar-studio-in69rh .etehadyar-studio__panel:not(.is-active){display:none}
+		#etehadyar-studio-in69rh .etehadyar-studio__hint{margin:0 0 14px;color:#667085;font-size:.88rem}
+		#etehadyar-studio-in69rh .etehadyar-studio__label{display:block;margin-bottom:6px;font-size:.88rem;color:#444}
+		#etehadyar-studio-in69rh .etehadyar-studio__input{width:100%;padding:11px 13px;border:1px solid #cfd4da;border-radius:9px;font:inherit;font-size:.96rem;resize:vertical}
+		#etehadyar-studio-in69rh .etehadyar-studio__input:focus,#etehadyar-studio-in69rh .etehadyar-studio__number:focus{outline:2px solid #1f6feb;outline-offset:1px;border-color:#1f6feb}
+		#etehadyar-studio-in69rh .etehadyar-studio__row{display:flex;align-items:center;gap:10px;margin-top:12px}
+		#etehadyar-studio-in69rh .etehadyar-studio__row .etehadyar-studio__label{margin:0}
+		#etehadyar-studio-in69rh .etehadyar-studio__number{width:110px;padding:9px 11px;border:1px solid #cfd4da;border-radius:9px;font:inherit}
+		#etehadyar-studio-in69rh .etehadyar-studio__footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+		#etehadyar-studio-in69rh .etehadyar-studio__cost{font-size:.9rem;color:#444}
+		#etehadyar-studio-in69rh .etehadyar-studio__run{padding:11px 26px;border:none;border-radius:10px;background:#1f6feb;color:#fff;font:inherit;font-weight:600;cursor:pointer}
+		#etehadyar-studio-in69rh .etehadyar-studio__run:disabled{opacity:.6;cursor:progress}
+		#etehadyar-studio-in69rh .etehadyar-studio__status{margin:14px 0 0;font-size:.9rem;min-height:1.2em}
+		#etehadyar-studio-in69rh .etehadyar-studio__status.is-error{color:#b42318}
+		#etehadyar-studio-in69rh .etehadyar-studio__status.is-ok{color:#15803d}
+		#etehadyar-studio-in69rh .etehadyar-studio__result{margin-top:16px;padding:16px;background:#f9fafb;border:1px solid #e3e6ea;border-radius:10px;max-height:460px;overflow:auto}
+		#etehadyar-studio-in69rh .etehadyar-studio__result img{max-width:100%;height:auto;border-radius:8px}
+		#etehadyar-studio-in69rh .etehadyar-studio__locked{margin:0;color:#b45309}
+		</style>
+
+		<script>
+		(function () {
+			var root = document.getElementById('etehadyar-studio-in69rh');
+			if (!root) { return; }
+
+			var ajaxUrl = root.dataset.ajax,
+				restRoot = root.dataset.root,
+				nonce = root.dataset.nonce,
+				restNonce = root.dataset.restNonce;
+
+			function t(el, sel) { return el.querySelector('[data-slot="' + sel + '"]'); }
+
+			function money(n) {
+				return new Intl.NumberFormat('fa-IR').format(Math.round(n)) + ' ریال';
+			}
+
+			// Mirrors Estimator::word_count() so the quoted price matches what
+			// the server will actually charge.
+			function words(s) {
+				s = (s || '').replace(/[\u200c\u200d]/g, '');
+				var parts = s.split(/[\s\u00a0]+/), n = 0;
+				for (var i = 0; i < parts.length; i++) {
+					if (/[\p{L}\p{N}]/u.test(parts[i])) { n++; }
+				}
+				return n;
+			}
+
+			function estimate(panel) {
+				var op = panel.dataset.operation,
+					price = parseInt(panel.dataset.price, 10) || 0,
+					prompt = panel.querySelector('[data-field="prompt"]'),
+					slot = t(panel, 'estimate'),
+					units = 0;
+
+				if (!slot) { return; }
+
+				if (op === 'content_word') {
+					var len = panel.querySelector('[data-field="length"]');
+					units = (parseInt(len && len.value, 10) || 0) / 100;
+				} else if (op === 'voice_minute') {
+					units = Math.ceil(((prompt && prompt.value.length) || 0) / 750);
+				} else {
+					units = 1;
+				}
+
+				slot.innerHTML = units > 0 ? money(Math.ceil(units) * price) : '—';
+			}
+
+			function setStatus(panel, msg, kind) {
+				var s = t(panel, 'status');
+				if (!s) { return; }
+				s.textContent = msg || '';
+				s.className = 'etehadyar-studio__status' + (kind ? ' is-' + kind : '');
+			}
+
+			function showResult(panel, data) {
+				var box = t(panel, 'result');
+				if (!box) { return; }
+
+				box.textContent = '';
+				box.hidden = false;
+
+				if (data.url && panel.dataset.operation === 'image') {
+					var img = document.createElement('img');
+					img.src = data.url;
+					img.alt = '';
+					box.appendChild(img);
+				} else if (data.url && panel.dataset.operation === 'voice_minute') {
+					var audio = document.createElement('audio');
+					audio.controls = true;
+					audio.src = data.url;
+					box.appendChild(audio);
+				} else if (data.html || data.article) {
+					// Server-generated markup is inserted as text first, then
+					// parsed, so a malformed provider response cannot inject
+					// script into the page.
+					var art = document.createElement('div');
+					art.innerHTML = (data.html || (data.article && data.article.html) || '')
+						.replace(/<script[\s\S]*?<\/script>/gi, '');
+					box.appendChild(art);
+				} else {
+					box.textContent = JSON.stringify(data, null, 2);
+				}
+			}
+
+			function refreshBalance() {
+				fetch(restRoot + '/wallet', { headers: { 'X-WP-Nonce': restNonce }, credentials: 'same-origin' })
+					.then(function (r) { return r.ok ? r.json() : null; })
+					.then(function (d) {
+						var slot = t(root, 'balance');
+						if (d && slot && typeof d.balance !== 'undefined') {
+							slot.innerHTML = money(d.balance);
+						}
+					})
+					.catch(function () {});
+			}
+
+			function poll(panel, jobId, tries) {
+				if (tries <= 0) {
+					setStatus(panel, 'کار هنوز در صف است. نتیجه در پنل کاربری نمایش داده می‌شود.', '');
+					return;
+				}
+
+				fetch(restRoot + '/studio/job/' + jobId, {
+					headers: { 'X-WP-Nonce': restNonce },
+					credentials: 'same-origin'
+				})
+					.then(function (r) { return r.json(); })
+					.then(function (job) {
+						if (!job || !job.status) { throw new Error('bad'); }
+
+						if (!job.is_final) {
+							setStatus(panel, 'در حال پردازش…', '');
+							setTimeout(function () { poll(panel, jobId, tries - 1); }, 3000);
+							return;
+						}
+
+						if (job.status === 'completed') {
+							setStatus(panel, 'انجام شد.', 'ok');
+							showResult(panel, job.result || {});
+						} else {
+							setStatus(panel, job.error || 'کار ناموفق بود؛ مبلغ بازگردانده می‌شود.', 'error');
+						}
+						refreshBalance();
+					})
+					.catch(function () {
+						setStatus(panel, 'خطا در دریافت وضعیت کار.', 'error');
+					});
+			}
+
+			function run(panel) {
+				var btn = panel.querySelector('[data-action="run"]'),
+					prompt = panel.querySelector('[data-field="prompt"]'),
+					value = (prompt && prompt.value || '').trim();
+
+				if (!value) {
+					setStatus(panel, 'لطفاً ابتدا متن را وارد کنید.', 'error');
+					return;
+				}
+
+				var body = new FormData();
+				body.append('action', panel.dataset.action);
+				body.append('_ajax_nonce', nonce);
+
+				if (panel.dataset.operation === 'voice_minute') {
+					body.append('text', value);
+				} else {
+					body.append('prompt', value);
+				}
+
+				var len = panel.querySelector('[data-field="length"]');
+				if (len) { body.append('length', len.value); }
+
+				btn.disabled = true;
+				setStatus(panel, 'در حال اجرا… این کار ممکن است تا یک دقیقه طول بکشد.', '');
+				var box = t(panel, 'result');
+				if (box) { box.hidden = true; }
+
+				fetch(ajaxUrl, { method: 'POST', body: body, credentials: 'same-origin' })
+					.then(function (r) { return r.json().catch(function () { return null; }); })
+					.then(function (res) {
+						btn.disabled = false;
+
+						if (!res) {
+							setStatus(panel, 'پاسخ نامعتبر بود؛ در صورت کسر، مبلغ بازگردانده می‌شود.', 'error');
+							refreshBalance();
+							return;
+						}
+
+						if (!res.success) {
+							var d = res.data;
+							setStatus(panel, (d && (d.message || d)) || 'عملیات ناموفق بود.', 'error');
+							refreshBalance();
+							return;
+						}
+
+						var data = res.data || {};
+
+						if (data.queued && data.job_id) {
+							setStatus(panel, 'کار در صف قرار گرفت…', '');
+							poll(panel, data.job_id, 40);
+							return;
+						}
+
+						setStatus(panel, 'انجام شد.', 'ok');
+						showResult(panel, data);
+						refreshBalance();
+					})
+					.catch(function () {
+						btn.disabled = false;
+						setStatus(panel, 'ارتباط با سرور برقرار نشد.', 'error');
+					});
+			}
+
+			root.addEventListener('click', function (e) {
+				var tab = e.target.closest('.etehadyar-studio__tab');
+				if (tab) {
+					var key = tab.dataset.tab;
+					root.querySelectorAll('.etehadyar-studio__tab').forEach(function (b) {
+						var on = b === tab;
+						b.classList.toggle('is-active', on);
+						b.setAttribute('aria-selected', on ? 'true' : 'false');
+					});
+					root.querySelectorAll('.etehadyar-studio__panel').forEach(function (p) {
+						var on = p.dataset.panel === key;
+						p.classList.toggle('is-active', on);
+						p.hidden = !on;
+					});
+					return;
+				}
+
+				var runBtn = e.target.closest('[data-action="run"]');
+				if (runBtn) {
+					run(runBtn.closest('.etehadyar-studio__panel'));
+				}
+			});
+
+			root.addEventListener('input', function (e) {
+				var panel = e.target.closest('.etehadyar-studio__panel');
+				if (panel) { estimate(panel); }
+			});
+
+			root.querySelectorAll('.etehadyar-studio__panel').forEach(estimate);
+		}());
+		</script>
+		</body></html>

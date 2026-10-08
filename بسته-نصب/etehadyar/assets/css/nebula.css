@@ -1,0 +1,219 @@
+/* EtehadWP Supernatural OS 6.0.1 — Nebula CSS — FIXED CONTRAST + LIGHT MODE */
+:root{
+  --nebula-bg:#070A14;
+  --nebula-card:rgba(255,255,255,.06);
+  --nebula-card-solid:#141A2E;
+  --nebula-border:rgba(255,255,255,.10);
+  --nebula-purple:#6d28ff;
+  --nebula-cyan:#00e5ff;
+  --nebula-pink:#ff2e97;
+  --nebula-text:#F1F3FF;
+  --nebula-text-strong:#FFFFFF;
+  --nebula-muted:#C2C8E6; /* FIX: روشن‌تر شد - خوانا */
+  --nebula-muted-2:#A8B0D0;
+  --nebula-input-bg:rgba(0,0,0,.32);
+  --nebula-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.eaiw-nebula-wrap{font-family:'Vazirmatn',Tahoma,sans-serif; color:var(--nebula-text); position:relative; margin:12px 0 0 2px; direction:rtl; width:auto; max-width:100%; overflow-x:hidden}
+.eaiw-nebula-wrap *{box-sizing:border-box}
+.eaiw-nebula-bg{position:fixed; inset:0; z-index:-1; pointer-events:none; background: radial-gradient(ellipse at 20% 10%, #6d28ff22 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, #00e5ff14 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, #ff2e9714 0%, transparent 60%), #070A14}
+.eaiw-nebula-wrap p, .eaiw-nebula-wrap li, .eaiw-nebula-wrap span, .eaiw-nebula-wrap div{color:inherit}
+.eaiw-nebula-wrap .muted, .eaiw-nebula-wrap [style*="#9aa0c0"]{color:var(--nebula-muted) !important}
+.eaiw-topbar{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; background:rgba(255,255,255,.06); border:1px solid var(--nebula-border); backdrop-filter:blur(16px); border-radius:18px; padding:14px 18px; margin-bottom:16px}
+.eaiw-brand{display:flex; align-items:center; gap:12px}
+.eaiw-logo{width:42px; height:42px; border-radius:12px; background:conic-gradient(from 0deg, var(--nebula-purple), var(--nebula-cyan), var(--nebula-pink), var(--nebula-purple)); display:grid; place-items:center; color:white; font-weight:900; box-shadow:0 0 18px #6d28ff66; flex-shrink:0}
+.eaiw-brand h1{font-size:1.15rem; font-weight:900; margin:0; line-height:1.2; color:var(--nebula-text-strong)}
+.eaiw-brand p{margin:0; font-size:.85rem; color:var(--nebula-muted); font-weight:500}
+.eaiw-supernatural-toggle{display:flex; align-items:center; gap:10px; background:rgba(0,0,0,.32); border:1px solid var(--nebula-border); border-radius:999px; padding:6px 10px}
+.eaiw-theme-toggle{display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.07); border:1px solid var(--nebula-border); border-radius:999px; padding:6px 10px; cursor:pointer; user-select:none}
+.eaiw-theme-toggle:hover{background:rgba(255,255,255,.12)}
+.eaiw-switch{position:relative; width:48px; height:26px; background:#1e293b; border-radius:999px; cursor:pointer; transition:.2s; border:1px solid #334155; flex-shrink:0}
+.eaiw-switch.on{background:linear-gradient(90deg,var(--nebula-purple),var(--nebula-cyan)); border-color:transparent}
+.eaiw-switch:after{content:""; position:absolute; top:2px; right:2px; width:20px; height:20px; background:white; border-radius:50%; transition:.2s; box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.eaiw-switch.on:after{transform:translateX(-24px)}
+.eaiw-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; width:100%; max-width:100%}
+.eaiw-card{min-width:0;background:var(--nebula-card); border:1px solid var(--nebula-border); backdrop-filter:blur(16px); border-radius:18px; padding:18px; box-shadow:var(--nebula-shadow); position:relative; overflow:hidden}
+.eaiw-card:before{content:""; position:absolute; inset:0; background:radial-gradient(500px 200px at 20% 0%, rgba(109,40,255,.11), transparent); pointer-events:none}
+.eaiw-card h3{margin:0 0 8px; font-size:1rem; font-weight:800; display:flex; align-items:center; gap:8px; color:var(--nebula-text-strong)}
+.eaiw-card p{color:var(--nebula-muted); font-size:.92rem}
+.eaiw-card ul, .eaiw-card ol{color:var(--nebula-muted)}
+.eaiw-kpi{grid-column:span 3; text-align:center}
+.eaiw-kpi strong{display:block; font-size:1.7rem; font-weight:900; color:var(--nebula-text-strong)}
+.eaiw-kpi span{font-size:.85rem; color:var(--nebula-muted); font-weight:600}
+.eaiw-col-8{grid-column:span 8}
+.eaiw-col-4{grid-column:span 4}
+.eaiw-col-6{grid-column:span 6}
+.eaiw-col-12{grid-column:span 12}
+.eaiw-btn{display:inline-flex; align-items:center; gap:6px; padding:9px 14px; border-radius:999px; font-weight:800; font-size:.85rem; text-decoration:none; cursor:pointer; border:1px solid transparent; transition:.15s; line-height:1}
+.eaiw-btn-primary{background:linear-gradient(90deg,var(--nebula-purple),#4f46e5); color:white !important; box-shadow:0 6px 16px #6d28ff44; border-color:transparent}
+.eaiw-btn-primary:hover{transform:translateY(-1px); box-shadow:0 10px 24px #6d28ff55; color:white !important}
+.eaiw-btn-ghost{background:rgba(255,255,255,.09); color:var(--nebula-text-strong) !important; border-color:var(--nebula-border)}
+.eaiw-btn-ghost:hover{background:rgba(255,255,255,.14); color:var(--nebula-text-strong) !important}
+.eaiw-btn-cyan{background:linear-gradient(90deg,#06b6d4,#22d3ee); color:#001018 !important}
+.eaiw-table{width:100%; border-collapse:collapse; font-size:.88rem}
+.eaiw-table th{padding:10px; text-align:right; background:rgba(109,40,255,.18); color:#E0E2FF; font-weight:800; border-bottom:1px solid rgba(255,255,255,.12)}
+.eaiw-table td{padding:10px; border-bottom:1px solid rgba(255,255,255,.08); color:var(--nebula-text)}
+.eaiw-badge{font-size:.72rem; padding:4px 9px; border-radius:999px; border:1px solid var(--nebula-border); background:rgba(255,255,255,.09); color:var(--nebula-text-strong); font-weight:700}
+.eaiw-badge.cyan{background:#00e5ff18; border-color:#00e5ff40; color:#A5F3FF}
+.eaiw-badge.purple{background:#6d28ff18; border-color:#6d28ff40; color:#DDD0FF}
+.eaiw-badge.green{background:#10b98118; border-color:#10b98140; color:#A7F3D0}
+.eaiw-badge.red{background:#ef444418; border-color:#ef444440; color:#FECACA}
+.eaiw-progress{height:10px; background:rgba(255,255,255,.12); border-radius:999px; overflow:hidden; border:1px solid rgba(255,255,255,.08)}
+.eaiw-progress i{display:block; height:100%; background:linear-gradient(90deg,var(--nebula-purple),var(--nebula-cyan)); width:0; transition:.4s}
+.eaiw-input, .eaiw-textarea, .eaiw-select{width:100%; background:var(--nebula-input-bg); border:1px solid var(--nebula-border); color:var(--nebula-text-strong); border-radius:12px; padding:10px 12px; font-family:inherit; font-size:.9rem; transition:.15s}
+.eaiw-input::placeholder, .eaiw-textarea::placeholder{color:#8D94B8}
+.eaiw-input:focus, .eaiw-textarea:focus, .eaiw-select:focus{outline:none; border-color:var(--nebula-purple); box-shadow:0 0 0 3px #6d28ff2e; background:rgba(0,0,0,.42)}
+.eaiw-pills{display:flex; flex-wrap:wrap; gap:8px}
+.eaiw-pill{font-size:.80rem; padding:6px 11px; border-radius:999px; background:rgba(255,255,255,.09); border:1px solid var(--nebula-border); color:var(--nebula-text); font-weight:600}
+.eaiw-jarvis{position:fixed; bottom:22px; left:22px; z-index:99; display:flex; align-items:center; gap:10px; background:rgba(10,15,31,.92); border:1px solid #6d28ff44; backdrop-filter:blur(12px); border-radius:999px; padding:8px 14px; box-shadow:0 8px 30px rgba(0,0,0,.4); color:#E6E8F2}
+.eaiw-jarvis-dot{width:10px; height:10px; background:#22c55e; border-radius:50%; box-shadow:0 0 10px #22c55e; flex-shrink:0}
+.eaiw-portal{position:fixed; inset:0; z-index:99999; background:radial-gradient(ellipse at 50% 30%, #6d28ff55, transparent 60%), radial-gradient(ellipse at 20% 80%, #00e5ff33, transparent 60%), #070A14; display:grid; place-items:center; transition:.6s; backdrop-filter:blur(2px)}
+.eaiw-portal.hide{opacity:0; pointer-events:none; transform:scale(1.05)}
+.eaiw-portal-card{text-align:center; padding:30px; color:white}
+.eaiw-portal-logo{width:92px; height:92px; margin:0 auto 16px; border-radius:50%; background:conic-gradient(from 0deg, var(--nebula-purple), var(--nebula-cyan), var(--nebula-pink), var(--nebula-purple)); padding:3px; box-shadow:0 0 40px #6d28ff88; animation:spin 6s linear infinite}
+.eaiw-portal-logo div{width:100%; height:100%; border-radius:50%; background:#070A14; display:grid; place-items:center; font-size:1.8rem; color:white}
+@keyframes spin{to{transform:rotate(360deg)}}
+.eaiw-command{position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.58); backdrop-filter:blur(8px); display:none; place-items:center; padding:20px}
+.eaiw-command.open{display:grid}
+.eaiw-command-box{width:min(640px, 96vw); background:#0a0f1f; border:1px solid #1e293b; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.eaiw-command-input{width:100%; background:transparent; border:none; border-bottom:1px solid #1e293b; padding:16px; color:white; font-size:1rem; outline:none}
+.eaiw-command-list{max-height:320px; overflow:auto; padding:8px}
+.eaiw-command-item{padding:10px 12px; border-radius:10px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:#CBD5E1}
+.eaiw-command-item:hover{background:rgba(109,40,255,.18); color:white}
+.eaiw-notice{background:rgba(255,255,255,.06); border:1px solid var(--nebula-border); border-radius:12px; padding:12px; color:var(--nebula-text)}
+
+/* ===== LIGHT MODE — FIXED ===== */
+.eaiw-nebula-wrap.eaiw-light{
+  --nebula-bg:#F1F5F9;
+  --nebula-card:rgba(255,255,255,.92);
+  --nebula-card-solid:#FFFFFF;
+  --nebula-border:rgba(15,23,42,.10);
+  --nebula-text:#1E293B;
+  --nebula-text-strong:#0F172A;
+  --nebula-muted:#475569;
+  --nebula-muted-2:#64748B;
+  --nebula-input-bg:#FFFFFF;
+  --nebula-shadow:0 4px 20px rgba(15,23,42,.08);
+}
+.eaiw-nebula-wrap.eaiw-light .eaiw-nebula-bg{background: radial-gradient(ellipse at 20% 10%, #6d28ff0f 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, #00e5ff0a 0%, transparent 50%), #F1F5F9}
+.eaiw-nebula-wrap.eaiw-light .eaiw-topbar{background:rgba(255,255,255,.96); border-color:rgba(15,23,42,.08); box-shadow:0 2px 12px rgba(15,23,42,.06)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-card{min-width:0;background:rgba(255,255,255,.96); border-color:rgba(15,23,42,.08); box-shadow:0 4px 16px rgba(15,23,42,.06)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-card:before{background:radial-gradient(500px 200px at 20% 0%, rgba(109,40,255,.06), transparent)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-btn-ghost{background:white; color:#0F172A !important; border-color:rgba(15,23,42,.12); box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-btn-ghost:hover{background:#F8FAFC; border-color:rgba(15,23,42,.18)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-input, .eaiw-nebula-wrap.eaiw-light .eaiw-textarea, .eaiw-nebula-wrap.eaiw-light .eaiw-select{background:white; border-color:rgba(15,23,42,.14); color:#0F172A; box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-input::placeholder, .eaiw-nebula-wrap.eaiw-light .eaiw-textarea::placeholder{color:#94A3B8}
+.eaiw-nebula-wrap.eaiw-light .eaiw-table th{background:#F1F5F9; color:#334155; border-bottom-color:rgba(15,23,42,.08)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-table td{border-bottom-color:rgba(15,23,42,.06); color:#1E293B}
+.eaiw-nebula-wrap.eaiw-light .eaiw-badge{background:white; border-color:rgba(15,23,42,.10); color:#334155}
+.eaiw-nebula-wrap.eaiw-light .eaiw-progress{background:#E2E8F0; border-color:rgba(15,23,42,.06)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-pill{background:white; border-color:rgba(15,23,42,.08); color:#334155}
+.eaiw-nebula-wrap.eaiw-light .eaiw-jarvis{background:rgba(255,255,255,.96); border-color:rgba(15,23,42,.12); color:#1E293B; box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.eaiw-nebula-wrap.eaiw-light .eaiw-supernatural-toggle, .eaiw-nebula-wrap.eaiw-light .eaiw-theme-toggle{background:white; border-color:rgba(15,23,42,.10)}
+.eaiw-nebula-wrap.eaiw-light ::-webkit-scrollbar-track{background:#F1F5F9}
+
+/* Improve contrast for inline muted helpers */
+.eaiw-light .eaiw-card p, .eaiw-light .eaiw-card li{color:#475569}
+.eaiw-light .eaiw-brand p{color:#64748B}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .eaiw-portal-logo{animation:none}
+  *{transition:none !important}
+}
+@media(max-width:1100px){
+  .eaiw-kpi{grid-column:span 6}
+  .eaiw-col-4,.eaiw-col-5,.eaiw-col-6,.eaiw-col-7,.eaiw-col-8,.eaiw-col-12{grid-column:span 12 !important}
+  /* Fix factory/video inner grids on mobile */
+  .eaiw-grid [style*="grid-template-columns:1fr 1fr"],
+  .eaiw-grid [style*="grid-template-columns:repeat(2,1fr)"],
+  .eaiw-grid [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr !important}
+}
+@media(max-width:640px){
+  .eaiw-kpi{grid-column:span 12}
+  .eaiw-topbar{padding:12px}
+  .eaiw-card{min-width:0;padding:14px}
+}
+
+/* Fix factory narrow bug - ensure grid is not constrained by WordPress .wrap */
+.wrap.eaiw-nebula-wrap{max-width:none; margin-right:2px}
+.eaiw-grid .eaiw-col-5{grid-column:span 5}
+.eaiw-grid .eaiw-col-7{grid-column:span 7}
+@media(max-width:1100px){.eaiw-grid .eaiw-col-5,.eaiw-grid .eaiw-col-7{grid-column:span 12 !important}}
+
+/* پیشخوان 6.8.2 — هماهنگ‌سازی با پوسته ایرانی مدرن */
+.eaiw-nebula-wrap .eaiw-kpi-img,.eaiw-nebula-wrap .eaiw-box{background:var(--nebula-card)!important;border-color:var(--nebula-border)!important;box-shadow:var(--nebula-shadow)!important;backdrop-filter:none!important}
+.eaiw-nebula-wrap .eaiw-kpi-img.purple{border-color:var(--nebula-border)!important}.eaiw-nebula-wrap .eaiw-kpi-img h4,.eaiw-nebula-wrap .eaiw-box h4{color:var(--nebula-text-strong)!important}.eaiw-nebula-wrap .eaiw-kpi-img .num{color:var(--nebula-text-strong)!important}.eaiw-nebula-wrap .eaiw-kpi-img .sub,.eaiw-nebula-wrap .eaiw-box [style*="color:#94A3B8"]{color:var(--nebula-muted)!important}.eaiw-nebula-wrap .eaiw-kpi-img .ico{background:#e5f2f1!important;border-color:#a9d8d2!important;color:var(--nebula-cyan)!important;box-shadow:none!important}
+.eaiw-nebula-wrap .eaiw-toggle-row{border-bottom-color:var(--nebula-border)!important}.eaiw-nebula-wrap .eaiw-sw{background:#b7b2aa;border-color:#a7a199}.eaiw-nebula-wrap .eaiw-sw.on{background:var(--nebula-cyan)!important}.eaiw-nebula-wrap .eaiw-prog{background:#e7e0d5!important}.eaiw-nebula-wrap .eaiw-bottom [style*="background:rgba(255,255,255,.06)"]{background:transparent!important;border-color:var(--nebula-border)!important;color:var(--nebula-purple)!important}
+.eaiw-nebula-wrap .eaiw-dash-top{gap:14px}.eaiw-nebula-wrap .eaiw-bottom{gap:14px}
+@media(max-width:640px){.eaiw-nebula-wrap .eaiw-dash-top{grid-template-columns:1fr!important}.eaiw-nebula-wrap .eaiw-bottom{grid-template-columns:1fr!important}.eaiw-nebula-wrap [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr!important}}
+
+/* 6.8.3 — اجزای مشترک برای حذف Styleهای پراکنده */
+.eaiw-inline-muted{font-size:.82rem;color:var(--nebula-muted)!important}.eaiw-inline-note{font-size:.78rem;color:var(--nebula-muted)!important;margin-bottom:8px}.eaiw-inline-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.eaiw-inline-stack{display:grid;gap:8px}.eaiw-action-link{display:block;text-align:center;padding:8px;border-radius:8px;background:transparent;border:1px solid var(--nebula-border);color:var(--nebula-purple)!important;text-decoration:none;font-weight:700;font-size:.8rem}.eaiw-action-link-primary{display:block;text-align:center;padding:9px;border-radius:8px;background:var(--nebula-purple);border:1px solid var(--nebula-purple);color:#fff!important;text-decoration:none;font-weight:800;font-size:.82rem}.eaiw-action-link:hover,.eaiw-action-link-primary:hover{filter:brightness(.96)}
+.eaiw-nebula-wrap .notice{border-radius:8px!important;border-right-width:4px!important;box-shadow:var(--nebula-shadow);direction:rtl;text-align:right}.eaiw-nebula-wrap .notice p{font-size:.88rem}.eaiw-nebula-wrap code,.eaiw-nebula-wrap pre{direction:ltr;text-align:left;max-width:100%;overflow:auto}.eaiw-nebula-wrap label{line-height:1.8}.eaiw-nebula-wrap input[type=checkbox]{accent-color:var(--nebula-cyan)}
+
+/* 6.8.4 — کلاس‌های استاندارد فرم و عملیات */
+.eaiw-field-label{display:block;margin-top:10px;color:var(--nebula-muted);font-size:.85rem;font-weight:700}.eaiw-help{font-size:.75rem;color:var(--nebula-muted);line-height:1.8}.eaiw-section-gap{margin-top:12px}.eaiw-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.eaiw-empty{text-align:center;padding:28px 16px;color:var(--nebula-muted);background:#f8f4ec;border:1px dashed var(--nebula-border);border-radius:10px}.eaiw-inline-button{display:inline-flex;align-items:center;justify-content:center;padding:7px 11px;border-radius:8px;font-size:.8rem;font-weight:700;text-decoration:none;cursor:pointer}.eaiw-note-success{padding:10px;border:1px solid #b5d8bb;background:#e6f3e9;border-radius:8px;color:#246239}.eaiw-note-warning{padding:10px;border:1px solid #e5c88f;background:#fff6dd;border-radius:8px;color:#795b16}
+
+/* 6.8.6 — مرکز سلامت */
+.eaiw-health-score{font-size:3rem;line-height:1.2;font-weight:900;color:var(--nebula-purple)}.eaiw-health-score small{font-size:1.2rem}.eaiw-health-list{display:grid;gap:6px}.eaiw-health-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid var(--nebula-border);border-radius:8px;background:#faf7f0}.eaiw-health-item.is-warning{background:#fff8e8;border-color:#e7c981}.eaiw-health-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e6f3e9;color:#246239;font-weight:900;flex:0 0 auto}.is-warning .eaiw-health-icon{background:#f8e9c7;color:#795b16}.eaiw-health-copy{display:grid;gap:1px;flex:1}.eaiw-health-copy strong{font-size:.86rem;color:var(--nebula-text-strong)}.eaiw-health-copy small{font-size:.72rem;color:var(--nebula-muted)}.eaiw-health-item>b{font-size:.78rem;color:var(--nebula-muted);font-weight:700}.eaiw-health-tip{font-size:.84rem;color:var(--nebula-muted)}
+
+/* 6.8.7 — وضعیت آخرین بررسی سلامت */
+.eaiw-health-last{font-size:.76rem!important;color:var(--nebula-muted)!important;margin:0 0 12px!important}.eaiw-health-summary .eaiw-progress{margin-top:12px}
+
+/* 6.8.8 — اقدام مستقیم برای هشدارها */
+.eaiw-health-fix{border:1px solid #c5d7df;background:#edf5f6;color:var(--nebula-purple)!important;border-radius:6px;padding:4px 7px;font:inherit;font-size:.68rem;font-weight:700;text-decoration:none;cursor:pointer;white-space:nowrap}.eaiw-health-fix:hover{background:#dfeff0}.is-warning .eaiw-health-copy{min-width:120px}
+
+/* 6.8.9 — تاریخچه فعالیت */
+.eaiw-activity-table{overflow:auto}.eaiw-activity-table code{font-size:.72rem;color:var(--nebula-muted)}.eaiw-activity-table td{vertical-align:top;min-width:100px}.eaiw-activity-table td:last-child{min-width:220px;max-width:360px;white-space:pre-wrap;word-break:break-word}
+
+/* 6.8.10 — فیلتر و صفحه‌بندی تاریخچه */
+.eaiw-activity-filter{display:grid;grid-template-columns:minmax(180px,1fr) 220px auto auto;gap:8px;margin:12px 0 16px}.eaiw-pagination{display:flex;gap:5px;justify-content:center;margin-top:14px}.eaiw-pagination a{min-width:30px;padding:4px 8px;text-align:center;border:1px solid var(--nebula-border);border-radius:6px;text-decoration:none;color:var(--nebula-purple)!important}.eaiw-pagination a.is-current{background:var(--nebula-purple);color:#fff!important}@media(max-width:700px){.eaiw-activity-filter{grid-template-columns:1fr}.eaiw-activity-filter .eaiw-btn{justify-content:center}}
+
+/* 6.8.11 — سطح اهمیت رویدادها */
+.eaiw-log-level{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.68rem;font-weight:700;margin-bottom:4px}.eaiw-log-level.level-info{background:#eaf0f6;color:#24456b}.eaiw-log-level.level-success{background:#e6f3e9;color:#246239}.eaiw-log-level.level-warning{background:#fff1cf;color:#795b16}.eaiw-log-level.level-error{background:#f8e9e4;color:#8c3925}
+
+/* 6.8.13 — خلاصه فعالیت‌ها */
+.eaiw-activity-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.eaiw-activity-summary .eaiw-card{display:grid;gap:3px;text-align:center;padding:13px}.eaiw-summary-label{font-size:.76rem;color:var(--nebula-muted)}.eaiw-activity-summary strong{font-size:1.5rem;color:var(--nebula-purple)}.eaiw-activity-summary .summary-success{color:#246239}.eaiw-activity-summary .summary-warning{color:#9a6713}.eaiw-top-events{margin-bottom:14px}.eaiw-top-event-list{display:grid;gap:6px}.eaiw-top-event-list span{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;background:#faf7f0;border:1px solid var(--nebula-border);border-radius:6px;font-size:.8rem}.eaiw-top-event-list em{font-style:normal;color:var(--nebula-purple);font-weight:800}@media(max-width:700px){.eaiw-activity-summary{grid-template-columns:repeat(2,1fr)}}
+
+/* 6.8.14 — نمودار هفت‌روزه */
+.eaiw-activity-chart{margin-bottom:14px}.eaiw-bars{height:170px;display:flex;align-items:end;justify-content:space-around;gap:10px;padding:12px 8px 0;border-bottom:1px solid var(--nebula-border);direction:ltr}.eaiw-day-bar{height:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:4px;direction:rtl}.eaiw-day-bar small{font-size:.68rem;color:var(--nebula-muted)}.eaiw-bar-value{font-size:.68rem;color:var(--nebula-muted);min-height:16px}.eaiw-bar{width:min(34px,70%);min-height:4px;background:#e9e2d7;border-radius:6px 6px 0 0;display:flex;flex-direction:column;justify-content:end;overflow:hidden}.eaiw-bar i{display:block;width:100%;flex:none}.bar-success{background:#5a9b69}.bar-warning{background:#c18a2d}.bar-error{background:#b85b43}
+
+/* 6.8.15 — بازه زمانی نمودار */
+.eaiw-range-tabs{display:flex;gap:5px;margin:10px 0;direction:rtl}.eaiw-range-tabs a{padding:3px 9px;border:1px solid var(--nebula-border);border-radius:6px;text-decoration:none;color:var(--nebula-purple)!important;font-size:.75rem}.eaiw-range-tabs a.is-current{background:var(--nebula-purple);color:#fff!important}
+
+/* 6.8.16 — وضعیت آزمون سازگاری */
+.eaiw-health-item .eaiw-health-copy small{max-width:560px}.eaiw-health-item.is-warning .eaiw-health-copy small{color:#795b16}
+
+/* 6.8.18 — آزمایش سرویس‌ها */
+.eaiw-provider-tests{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}.eaiw-provider-test{display:grid;gap:7px;padding:10px;border:1px solid var(--nebula-border);border-radius:8px;background:#faf7f0}.eaiw-provider-test strong{font-size:.82rem}.eaiw-test-result{font-size:.72rem;min-height:20px;color:var(--nebula-muted)}.eaiw-test-result.is-ok{color:#246239}.eaiw-test-result.is-error{color:#8c3925}@media(max-width:900px){.eaiw-provider-tests{grid-template-columns:repeat(2,1fr)}}
+
+/* 6.9.1 — مدیریت صف */
+.eaiw-jobs-table{overflow:auto}.eaiw-jobs-table td{vertical-align:top;white-space:nowrap}.eaiw-jobs-table td:nth-child(6){white-space:normal;min-width:180px}.eaiw-jobs-table .eaiw-btn{font-size:.72rem;padding:5px 8px}
+
+/* 6.10.0 — آمار سامانه */
+.eaiw-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.eaiw-stat-grid .eaiw-card{text-align:center;padding:14px}.eaiw-stat-grid span{font-size:.78rem;color:var(--nebula-muted)}.eaiw-stat-grid strong{display:block;font-size:1.6rem;color:var(--nebula-purple)}.eaiw-stat-grid .stat-success{color:#246239}.eaiw-stat-grid .stat-error{color:#8c3925}.eaiw-stat-grid .stat-info{color:#8a671d}@media(max-width:700px){.eaiw-stat-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* 6.10.1 — زمان اجرای کارها */
+.eaiw-stat-grid .eaiw-card small{display:block;color:var(--nebula-muted)}
+.eaiw-support-list{display:grid;gap:12px}.eaiw-support-item{border:1px solid var(--nebula-border);border-radius:10px;padding:14px;background:#faf7f0}.eaiw-support-message{padding:10px;margin:8px 0;background:#fffdf8;border:1px solid var(--nebula-border);border-radius:8px;white-space:pre-wrap}.eaiw-support-response{margin:8px 0;min-height:80px}
+.eaiw-support-filter{display:grid;grid-template-columns:1fr 190px auto;gap:8px;margin:12px 0 16px}.eaiw-support-item .eaiw-toolbar .eaiw-select{max-width:220px}@media(max-width:700px){.eaiw-support-filter{grid-template-columns:1fr}.eaiw-support-filter .eaiw-btn{justify-content:center}}
+.eaiw-negative-feedback{margin-bottom:14px}.eaiw-feedback-row{display:grid;grid-template-columns:120px 1fr 130px;gap:8px;align-items:center;padding:8px;border:1px solid var(--nebula-border);border-radius:7px;background:#fff8f5;font-size:.78rem;margin-top:6px}.eaiw-feedback-row small{color:var(--nebula-muted)}@media(max-width:700px){.eaiw-feedback-row{grid-template-columns:1fr}.eaiw-feedback-row .eaiw-badge{width:max-content}}
+.eaiw-feedback-row .eaiw-feedback-faq{font-size:.68rem;padding:4px 7px}
+.eaiw-support-filter{grid-template-columns:minmax(180px,1fr) 170px 170px auto}@media(max-width:700px){.eaiw-support-filter{grid-template-columns:1fr}}
+.eaiw-support-history{margin:8px 0;border:1px solid var(--nebula-border);border-radius:8px;background:#f8f4ec;padding:8px}.eaiw-support-history summary{cursor:pointer;color:var(--nebula-purple);font-size:.78rem;font-weight:700}.eaiw-support-history>div{border-top:1px solid var(--nebula-border);padding:8px 2px;margin-top:6px}.eaiw-support-history strong{font-size:.76rem}.eaiw-support-history small{color:var(--nebula-muted);margin-right:8px}.eaiw-support-history p{font-size:.8rem;margin:3px 0;color:var(--nebula-text)}
+.eaiw-support-history{margin:8px 0;border:1px solid var(--nebula-border);border-radius:8px;background:#f8f4ec;padding:8px}.eaiw-support-history summary{cursor:pointer;color:var(--nebula-purple);font-size:.78rem;font-weight:700}.eaiw-support-history>div{border-top:1px solid var(--nebula-border);padding:8px 2px;margin-top:6px}.eaiw-support-history strong{font-size:.76rem}.eaiw-support-history small{color:var(--nebula-muted);margin-right:8px}.eaiw-support-history p{font-size:.8rem;margin:3px 0;color:var(--nebula-text)}
+#eaiwSoulMic.is-listening{background:#f8e9e4!important;color:#8c3925!important;border-color:#e5b9aa!important;animation:eaiwVoicePulse 1.2s infinite}@keyframes eaiwVoicePulse{50%{box-shadow:0 0 0 5px rgba(184,91,67,.16)}}
+.eaiw-support-transcript{padding:10px;margin:8px 0;background:#edf5f6;border:1px solid #c5d7df;border-radius:8px;white-space:pre-wrap;font-size:.82rem}.eaiw-support-transcript strong{color:var(--nebula-purple)}
+.eaiw-support-transcript{padding:10px;margin:8px 0;background:#edf5f6;border:1px solid #c5d7df;border-radius:8px;white-space:pre-wrap;font-size:.82rem}.eaiw-support-transcript strong{color:var(--nebula-purple)}
+#eaiwSoulLive.is-live{background:#e6f3e9!important;color:#246239!important;border-color:#b5d8bb!important;box-shadow:0 0 0 4px rgba(90,155,105,.14)}
+
+/* 6.13.1 — پوسته واکنش‌گرا و رفع شکست چیدمان */
+.eaiw-nebula-wrap,.eaiw-nebula-wrap .wrap{width:100%;max-width:100%;min-width:0}.eaiw-nebula-wrap{overflow-x:hidden;padding-inline:clamp(8px,1.4vw,22px)}.eaiw-nebula-wrap .eaiw-topbar{width:100%;min-width:0}.eaiw-nebula-wrap .eaiw-brand{min-width:0;flex:1}.eaiw-nebula-wrap .eaiw-brand h1,.eaiw-nebula-wrap .eaiw-brand p{overflow-wrap:anywhere}.eaiw-nebula-wrap img,.eaiw-nebula-wrap video,.eaiw-nebula-wrap audio{max-width:100%;height:auto}.eaiw-nebula-wrap table{max-width:100%}.eaiw-table-wrap,.eaiw-jobs-table,.eaiw-activity-table{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.eaiw-table{min-width:620px}.eaiw-card{min-width:0;overflow:hidden}.eaiw-btn{white-space:normal;text-align:center}.eaiw-nebula-wrap textarea{max-width:100%;resize:vertical}
+/* اجزایی که در Templateهای قدیمی Grid ثابت داشتند */
+.eaiw-nebula-wrap [style*="grid-template-columns:repeat(4,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:repeat(3,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:repeat(2,1fr)"]{min-width:0}
+@media(max-width:1100px){.eaiw-nebula-wrap .eaiw-col-4,.eaiw-nebula-wrap .eaiw-col-5,.eaiw-nebula-wrap .eaiw-col-6,.eaiw-nebula-wrap .eaiw-col-7,.eaiw-nebula-wrap .eaiw-col-8,.eaiw-nebula-wrap .eaiw-col-12{grid-column:span 12!important}.eaiw-nebula-wrap .eaiw-kpi{grid-column:span 6}.eaiw-nebula-wrap .eaiw-bottom{grid-template-columns:1fr!important}.eaiw-nebula-wrap .eaiw-dash-top{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eaiw-nebula-wrap [style*="grid-template-columns:repeat(4,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eaiw-nebula-wrap .eaiw-provider-tests{grid-template-columns:repeat(2,minmax(0,1fr))}.eaiw-nebula-wrap .eaiw-activity-filter{grid-template-columns:minmax(160px,1fr) 180px auto auto}.eaiw-nebula-wrap .eaiw-support-filter{grid-template-columns:minmax(160px,1fr) 160px 160px auto}}
+@media(max-width:700px){.eaiw-nebula-wrap{margin:0!important;padding:6px!important}.eaiw-nebula-wrap .eaiw-topbar{align-items:flex-start;padding:11px;gap:9px}.eaiw-nebula-wrap .eaiw-topbar>.eaiw-toolbar,.eaiw-nebula-wrap .eaiw-topbar>a{width:100%}.eaiw-nebula-wrap .eaiw-topbar>.eaiw-toolbar{justify-content:flex-start}.eaiw-nebula-wrap .eaiw-brand{width:100%;align-items:flex-start}.eaiw-nebula-wrap .eaiw-brand h1{font-size:1rem}.eaiw-nebula-wrap .eaiw-brand p{font-size:.76rem}.eaiw-nebula-wrap .eaiw-logo{width:36px;height:36px}.eaiw-nebula-wrap .eaiw-grid{grid-template-columns:minmax(0,1fr)!important}.eaiw-nebula-wrap .eaiw-kpi{grid-column:span 12!important}.eaiw-nebula-wrap .eaiw-dash-top,.eaiw-nebula-wrap .eaiw-stat-grid{grid-template-columns:minmax(0,1fr)!important}.eaiw-nebula-wrap [style*="grid-template-columns:repeat(4,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:repeat(3,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:repeat(2,1fr)"],.eaiw-nebula-wrap [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:minmax(0,1fr)!important}.eaiw-nebula-wrap .eaiw-provider-tests,.eaiw-nebula-wrap .eaiw-activity-filter,.eaiw-nebula-wrap .eaiw-support-filter{grid-template-columns:minmax(0,1fr)!important}.eaiw-nebula-wrap .eaiw-toolbar{align-items:stretch}.eaiw-nebula-wrap .eaiw-toolbar>.eaiw-btn,.eaiw-nebula-wrap .eaiw-toolbar>a,.eaiw-nebula-wrap .eaiw-toolbar>button{max-width:100%}.eaiw-nebula-wrap .eaiw-card{padding:12px}.eaiw-nebula-wrap .eaiw-activity-chart{overflow:hidden}.eaiw-nebula-wrap .eaiw-bars{gap:4px;height:145px;padding-inline:2px}.eaiw-nebula-wrap .eaiw-day-bar{min-width:0}.eaiw-nebula-wrap .eaiw-bar{width:min(24px,70%)}.eaiw-nebula-wrap .eaiw-health-item{align-items:flex-start;flex-wrap:wrap}.eaiw-nebula-wrap .eaiw-health-item>b{margin-right:34px}.eaiw-nebula-wrap .eaiw-health-fix{margin-right:34px}.eaiw-nebula-wrap .eaiw-table{font-size:.78rem}.eaiw-nebula-wrap .eaiw-btn{font-size:.78rem;padding:7px 10px}.eaiw-nebula-wrap input,.eaiw-nebula-wrap select{min-width:0;max-width:100%}}
+@media(max-width:420px){.eaiw-nebula-wrap .eaiw-btn{width:100%}.eaiw-nebula-wrap .eaiw-brand p{display:none}.eaiw-nebula-wrap .eaiw-card h3{font-size:.92rem}.eaiw-nebula-wrap .eaiw-table{min-width:560px}}
+/* 6.13.2 — فاصله امن دستگاه‌های همراه */
+@supports(padding:max(0px)){#eaiwSoulPanel{margin-bottom:max(0px,env(safe-area-inset-bottom))!important}#eaiwSoulBtn{margin-bottom:max(0px,env(safe-area-inset-bottom))!important}}
