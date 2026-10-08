@@ -1,0 +1,29 @@
+# --- ابزارهای توسعه ---
+/vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# --- لاگ و فایل‌های موقت ---
+*.log
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# --- خروجی ابزارهای کیفیت کد ---
+.phpunit.result.cache
+.phpcs-cache
+phpcs.xml
+.phpstan/
+coverage/
+
+# --- محیط محلی وردپرس (این مخزن فقط کد پلاگین/پوسته را نگه می‌دارد) ---
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# --- بسته‌های ساخته‌شده ---
+*.zip
+!EtehadYar.zip

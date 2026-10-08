@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>اتحادیار</title>
+<style>/*
+Theme Name: اتحادیار
+Theme URI: https://etehadyar.ir/
+Author: تیم اتحادیار
+Description: قالب پلتفرمی اتحادیار — پوستهٔ راست‌به‌چپ برای سرویس هوش مصنوعی با ورود پیامکی، کیف پول و داشبورد کاربری. برای کار به افزونهٔ «هستهٔ اتحادیار» نیاز دارد.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: etehadyar-theme
+Tags: rtl-language-support, custom-menu, translation-ready, full-width-template
+*/
+
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+
+:root {
+	--ey-bg: #f5f7fa;
+	--ey-surface: #ffffff;
+	--ey-ink: #1b2431;
+	--ey-muted: #667085;
+	--ey-line: #e3e6ea;
+	--ey-brand: #1f6feb;
+	--ey-brand-dark: #1a5fcc;
+	--ey-ok: #15803d;
+	--ey-warn: #b45309;
+	--ey-bad: #b42318;
+	--ey-radius: 14px;
+	--ey-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .06);
+	--ey-wrap: 1120px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--ey-bg);
+	color: var(--ey-ink);
+	font-family: Vazirmatn, "IRANSans", Tahoma, -apple-system, "Segoe UI", sans-serif;
+	font-size: 16px;
+	line-height: 1.85;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: var(--ey-brand);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4 {
+	line-height: 1.45;
+	margin: 0 0 .6em;
+	font-weight: 700;
+}
+
+/* Latin fragments — phone numbers, amounts, codes — stay left-to-right
+   even inside an RTL paragraph. */
+.ey-ltr,
+code,
+kbd {
+	direction: ltr;
+	unicode-bidi: isolate;
+}
+
+/* Keyboard users must be able to see where they are. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid var(--ey-brand);
+	outline-offset: 2px;
+	border-radius: 6px;
+}
+
+.ey-skip {
+	position: absolute;
+	right: -9999px;
+	top: 0;
+	z-index: 999;
+	padding: 10px 18px;
+	background: var(--ey-brand);
+	color: #fff;
+	border-radius: 0 0 0 10px;
+}
+
+.ey-skip:focus {
+	right: 0;
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.ey-wrap {
+	max-width: var(--ey-wrap);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.ey-main {
+	padding: 34px 0 60px;
+	min-height: 60vh;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.ey-header {
+	background: var(--ey-surface);
+	border-bottom: 1px solid var(--ey-line);
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+.ey-header__inner {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	min-height: 66px;
+}
+
+.ey-brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 800;
+	font-size: 1.16rem;
+	color: var(--ey-ink);
+	flex-shrink: 0;
+}
+
+.ey-brand:hover {
+	text-decoration: none;
+}
+
+.ey-brand__mark {
+	width: 34px;
+	height: 34px;
+	border-radius: 9px;
+	background: linear-gradient(135deg, var(--ey-brand), #7c3aed);
+	display: grid;
+	place-items: center;
+	color: #fff;
+	font-size: .95rem;
+	font-weight: 700;
+}
+
+.ey-nav {
+	margin-inline-start: auto;
+}
+
+.ey-nav ul {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ey-nav a {
+	display: block;
+	padding: 8px 13px;
+	border-radius: 9px;
+	color: var(--ey-ink);
+	font-size: .94rem;
+}
+
+.ey-nav a:hover,
+.ey-nav .current-menu-item > a {
+	background: #eef2f7;
+	text-decoration: none;
+}
+
+.ey-header__actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.ey-balance {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: #eef6ff;
+	color: var(--ey-brand-dark);
+	font-size: .86rem;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.ey-balance--low {
+	background: #fff4ed;
+	color: var(--ey-warn);
+}
+
+.ey-btn {
+	display: inline-block;
+	padding: 9px 18px;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	background: var(--ey-brand);
+	color: #fff;
+	font: inherit;
+	font-size: .92rem;
+	font-weight: 600;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.ey-btn:hover {
+	background: var(--ey-brand-dark);
+	color: #fff;
+	text-decoration: none;
+}
+
+.ey-btn--ghost {
+	background: transparent;
+	color: var(--ey-ink);
+	border-color: var(--ey-line);
+}
+
+.ey-btn--ghost:hover {
+	background: #eef2f7;
+	color: var(--ey-ink);
+}
+
+.ey-menu-toggle {
+	display: none;
+	padding: 7px 11px;
+	border: 1px solid var(--ey-line);
+	border-radius: 9px;
+	background: #fff;
+	font: inherit;
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Cards, notices, hero
+   ========================================================================== */
+
+.ey-card {
+	background: var(--ey-surface);
+	border: 1px solid var(--ey-line);
+	border-radius: var(--ey-radius);
+	box-shadow: var(--ey-shadow);
+	padding: 26px;
+}
+
+.ey-hero {
+	background: linear-gradient(135deg, #eef4ff, #f6f0ff);
+	border: 1px solid #dfe7fb;
+	border-radius: 20px;
+	padding: 52px 30px;
+	text-align: center;
+	margin-bottom: 34px;
+}
+
+.ey-hero h1 {
+	font-size: clamp(1.6rem, 4vw, 2.3rem);
+	margin-bottom: .45em;
+}
+
+.ey-hero p {
+	max-width: 620px;
+	margin: 0 auto 1.5em;
+	color: #44506b;
+}
+
+.ey-hero__cta {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.ey-features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 18px;
+	margin-bottom: 34px;
+}
+
+.ey-feature__icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 11px;
+	background: #eef4ff;
+	display: grid;
+	place-items: center;
+	margin-bottom: 12px;
+	font-size: 1.2rem;
+}
+
+.ey-feature h3 {
+	font-size: 1.02rem;
+	margin-bottom: .3em;
+}
+
+.ey-feature p {
+	margin: 0;
+	color: var(--ey-muted);
+	font-size: .92rem;
+}
+
+.ey-notice {
+	padding: 14px 18px;
+	border-radius: 11px;
+	border: 1px solid;
+	margin-bottom: 20px;
+	font-size: .94rem;
+}
+
+.ey-notice--info {
+	background: #eff6ff;
+	border-color: #bfdbfe;
+	color: #1e40af;
+}
+
+.ey-notice--warn {
+	background: #fffbeb;
+	border-color: #fde68a;
+	color: #92400e;
+}
+
+.ey-notice--error {
+	background: #fef2f2;
+	border-color: #fecaca;
+	color: var(--ey-bad);
+}
+
+/* The core plugin's shortcodes ship their own scoped styling; the theme only
+   needs to give them room to breathe. */
+.ey-shortcode-slot {
+	margin: 0 auto;
+}
+
+.ey-page-title {
+	font-size: 1.5rem;
+	margin-bottom: 22px;
+}
+
+.ey-entry {
+	background: var(--ey-surface);
+	border: 1px solid var(--ey-line);
+	border-radius: var(--ey-radius);
+	padding: 30px;
+	box-shadow: var(--ey-shadow);
+}
+
+.ey-entry p:first-child {
+	margin-top: 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.ey-footer {
+	background: var(--ey-surface);
+	border-top: 1px solid var(--ey-line);
+	padding: 26px 0;
+	color: var(--ey-muted);
+	font-size: .88rem;
+}
+
+.ey-footer__inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ey-footer ul {
+	display: flex;
+	gap: 16px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 860px) {
+	.ey-menu-toggle {
+		display: block;
+		margin-inline-start: auto;
+	}
+
+	.ey-nav {
+		display: none;
+		order: 3;
+		width: 100%;
+		margin: 0 0 12px;
+	}
+
+	.ey-nav.is-open {
+		display: block;
+	}
+
+	.ey-nav ul {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 2px;
+	}
+
+	.ey-header__inner {
+		flex-wrap: wrap;
+		padding-block: 10px;
+	}
+
+	.ey-header__actions {
+		order: 2;
+	}
+
+	.ey-hero {
+		padding: 38px 20px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: .001ms !important;
+		transition-duration: .001ms !important;
+	}
+}
+</style></head>
+
+<body class="ey-guest ">
+
+<a class="ey-skip" href="#ey-main">پرش به محتوای اصلی</a>
+
+<header class="ey-header">
+	<div class="ey-wrap ey-header__inner">
+
+					<a class="ey-brand" href="/" rel="home">
+				<span class="ey-brand__mark" aria-hidden="true">ا</span>
+				<span>اتحادیار</span>
+			</a>
+		
+		<button class="ey-menu-toggle" type="button"
+			aria-expanded="false" aria-controls="ey-primary-nav"
+			onclick="var n=document.getElementById('ey-primary-nav');var o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o?'true':'false');">
+			<span class="screen-reader-text">فهرست</span>
+			<span aria-hidden="true">☰</span>
+		</button>
+
+		<nav class="ey-nav" id="ey-primary-nav" aria-label="فهرست اصلی">
+							<ul>
+					<li><a href="/">خانه</a></li>
+									</ul>
+						</nav>
+
+		<div class="ey-header__actions">
+			
+				<a class="ey-btn" href="#login">
+					ورود / ثبت‌نام				</a>
+
+					</div>
+
+	</div>
+</header>
+
+<main class="ey-main" id="ey-main">
+	<div class="ey-wrap">
+
+<div class="ey-entry" style="text-align:center">
+	<h1 class="ey-page-title">صفحه پیدا نشد</h1>
+	<p>نشانی‌ای که دنبال آن بودید وجود ندارد یا جابه‌جا شده است.</p>
+	<p style="margin-top:22px">
+		<a class="ey-btn" href="/">
+			بازگشت به خانه		</a>
+	</p>
+</div>
+
+	</div><!-- .ey-wrap -->
+</main>
+
+<footer class="ey-footer">
+	<div class="ey-wrap ey-footer__inner">
+		<p style="margin:0">
+			© ۱۴۰۴ اتحادیار — تمام حقوق محفوظ است.		</p>
+
+			</div>
+</footer>
+
+</body>
+</html>
