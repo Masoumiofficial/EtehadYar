@@ -399,9 +399,46 @@ class Ajax_Billing {
 			return;
 		}
 
-		// A queued job has not done the work yet; it will be billed by the
-		// worker when it actually runs.
+		/*
+		 * A queued job has not done the work yet, so its outcome cannot be
+		 * judged from this response. Hand the charge to Job_Settlement, which
+		 * listens to the worker's `eaiw_job_result` hook and refunds it if the
+		 * job finally fails. Without this hand-off the comment below used to be
+		 * a promise nothing kept: the legacy worker has no billing code, so the
+		 * charge simply stood even for a job that never produced anything.
+		 */
 		if ( ! empty( $data['queued'] ) ) {
+			$job_id = (int) ( $data['job_id'] ?? 0 );
+
+			if ( $job_id > 0 ) {
+				Job_Settlement::reserve( $job_id, $pending );
+			} else {
+				// The handler said "queued" but did not tell us which job, so
+				// nothing can ever settle this charge. Refunding now is the
+				// safe direction: the work has not happened yet either.
+				Audit::log(
+					'billing.unreservable_queued_job',
+					array(
+						'user_id'  => (int) $pending['user_id'],
+						'severity' => 'warning',
+						'context'  => array(
+							'action'  => (string) $pending['action'],
+							'charged' => (int) $pending['charged'],
+						),
+					)
+				);
+
+				Wallet::refund(
+					(int) $pending['user_id'],
+					(int) $pending['charged'],
+					__( 'بازگشت وجه: کار صف‌شده قابل پیگیری نیست.', 'etehadyar-core' ),
+					array(
+						'reference' => (string) $pending['action'],
+						'meta'      => array( 'operation' => (string) $pending['operation'] ),
+					)
+				);
+			}
+
 			return;
 		}
 

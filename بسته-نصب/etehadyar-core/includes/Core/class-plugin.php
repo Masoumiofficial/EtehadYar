@@ -18,6 +18,7 @@ use Etehadyar\Admin\Analytics_Screen;
 use Etehadyar\Admin\Brain_Screen;
 use Etehadyar\Compat\Legacy_Bridge;
 use Etehadyar\Billing\Ajax_Billing;
+use Etehadyar\Billing\Job_Settlement;
 use Etehadyar\Billing\Orders;
 use Etehadyar\Frontend\Auth_Shortcode;
 use Etehadyar\Frontend\Dashboard_Shortcode;
@@ -98,6 +99,7 @@ class Plugin {
 		Endpoint_Guard::boot();
 		Temp_Sweeper::boot();
 		Ajax_Billing::boot();
+		Job_Settlement::boot();
 	}
 
 	/**
